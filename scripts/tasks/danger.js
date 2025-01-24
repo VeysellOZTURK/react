@@ -29,11 +29,7 @@ spawn(
     },
   }
 ).on('close', function (code) {
-  if (code !== 0) {
-    console.error('Danger failed');
-  } else {
-    console.log('Danger passed');
-  }
-
+  if (code !== 0) console.error('Danger failed');
+  else console.log('Danger passed');
   process.exit(code);
 });
